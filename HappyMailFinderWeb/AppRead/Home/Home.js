@@ -12,7 +12,6 @@
         });
     };
 
-    // Displays the "Subject" and "From" fields, based on the current mail item
     function displayItemDetails() {
         var item = Office.cast.item.toItemRead(Office.context.mailbox.item);
         var encodedSubject = encodeURIComponent(item.subject);
@@ -40,7 +39,7 @@
             }
         }
         xmlHttp.open("GET", theUrl, true);
-        xmlHttp.setRequestHeader("Authorization", "Basic QWNjb3VudEtleTpQL045cDRNQjZGcE5xOGZuelFJQ0ljVVo0RHlmeHgydlJxbERlaXVDOGZJ");
+        xmlHttp.setRequestHeader("Authorization", "Basic [YOUR BASE 64 ENCODED KEY]");
         xmlHttp.setRequestHeader("Accept", "application/json");
         xmlHttp.send(null);
     }
